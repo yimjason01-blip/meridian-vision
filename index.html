@@ -503,7 +503,8 @@
   <div class="waitlist" id="waitlist" style="margin-top:80px;">
     <form class="waitlist-form" id="waitlistForm" onsubmit="return submitWaitlist(event)">
       <div class="waitlist-input-row">
-        <input type="text" id="waitlistName" placeholder="First name" required autocomplete="given-name" />
+        <input type="text" id="waitlistFirst" placeholder="First name" required autocomplete="given-name" />
+        <input type="text" id="waitlistLast" placeholder="Last name" required autocomplete="family-name" />
         <input type="email" id="waitlistEmail" placeholder="Email" required autocomplete="email" />
         <button type="submit" id="waitlistBtn">Send me the next chapter</button>
       </div>
@@ -566,12 +567,13 @@ const GFORM_EMAIL = 'entry.1221701213';
 
 function submitWaitlist(e) {
   e.preventDefault();
-  const name = document.getElementById('waitlistName').value.trim();
+  const first = document.getElementById('waitlistFirst').value.trim();
+  const last = document.getElementById('waitlistLast').value.trim();
   const email = document.getElementById('waitlistEmail').value.trim();
   const btn = document.getElementById('waitlistBtn');
   const status = document.getElementById('waitlistStatus');
 
-  if (!name || !email) return false;
+  if (!first || !last || !email) return false;
 
   btn.disabled = true;
   btn.textContent = 'Joining...';
@@ -579,7 +581,7 @@ function submitWaitlist(e) {
   status.className = 'waitlist-status';
 
   const formData = new FormData();
-  formData.append(GFORM_NAME, name);
+  formData.append(GFORM_NAME, first + ' ' + last);
   formData.append(GFORM_EMAIL, email);
 
   fetch(GFORM_ACTION, {
