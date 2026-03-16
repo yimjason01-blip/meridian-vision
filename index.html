@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Meridian Project</title>
+<meta name="description" content="Superhuman clarity. All of your data. Every relevant study. One thing to do this week.">
+<meta property="og:title" content="The Meridian Project">
+<meta property="og:description" content="Superhuman clarity. All of your data. Every relevant study. One thing to do this week.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-meridian-project.com">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Meridian Project">
+<meta name="twitter:description" content="Superhuman clarity. All of your data. Every relevant study. One thing to do this week.">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
 
@@ -409,7 +417,7 @@
     .waitlist-input-row { flex-direction: column; }
     .waitlist-input-row button { width: 100%; }
     .stats-grid { grid-template-columns: 1fr; }
-    .nav-links a { margin-left: 16px; font-size: 12px; }
+    .nav-links a { margin-left: 16px; }
   }
 </style>
 </head>
@@ -471,7 +479,7 @@
 
   <!-- Section 4 -->
   <div class="chapter"><span class="chapter-num">4</span><span class="chapter-title">The Meridian MD</span></div>
-  <p>I believe that physicians are among the best of us. They exist at the intersection of minds brilliant enough to comprehend and hearts compassionate enough to serve. The systems we're building does not replace the physician…it elevates them. If most primary care physicians are serving by pedaling a bicycle, the Meridian MD is serving while driving an F1 car. It's harder, not easier…it's also a lot more rewarding.</p>
+  <p>I believe that physicians are among the best of us. They exist at the intersection of minds brilliant enough to comprehend and hearts compassionate enough to serve. The system we're building does not replace the physician…it elevates them. If most primary care physicians are serving by pedaling a bicycle, the Meridian MD is serving while driving an F1 car. It's harder, not easier…it's also a lot more rewarding.</p>
   <p>Meridian MDs are the judge of the debate — conductors of an AI symphony. They pose questions back to the AI medical board. They apply the human judgment and 'gut check' that AI can't. Then, they deliver it to you — personally. A conversation with someone who knows your name, your data, and your motivation to thrive.</p>
   <p>When you need a specialist's hands — a procedure, an imaging study, a physical exam — that's when you see a specialist. Everything else, your physician handles. Because for the first time, they actually can.</p>
 
@@ -591,7 +599,7 @@ function submitWaitlist(e) {
     mode: 'no-cors'
   })
   .then(() => {
-    status.textContent = "You're on the list. We'll be in touch.";
+    status.textContent = "Got it. I'll send you the next chapter when it's ready.";
     status.className = 'waitlist-status success';
     btn.textContent = 'Joined ✓';
     document.getElementById('waitlistEmail').value = '';
