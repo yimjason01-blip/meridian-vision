@@ -415,7 +415,7 @@
 <nav>
   <div class="nav-logo">Meridian</div>
   <div class="nav-links">
-    <a href="#waitlist" style="border:1px solid rgba(184,168,138,0.3); padding:8px 20px; border-radius:2px; letter-spacing:2px;">Join Waitlist</a>
+    <a href="#whats-next" style="border:1px solid rgba(184,168,138,0.3); padding:8px 20px; border-radius:2px; letter-spacing:2px;">What's Next?</a>
   </div>
 </nav>
 
@@ -604,23 +604,20 @@
   <p>We watch them.</p>
 
   <!-- Section 7 -->
-  <div class="chapter"><span class="chapter-num">7</span><span class="chapter-title">What's Next</span></div>
-  <p>I'm building Meridian because this should exist and it doesn't. Not as a luxury. Not as a biohacking gadget. As the basic infrastructure for staying alive long enough to benefit from everything that's coming — gene therapies, epigenetic medicine, AI diagnostics that will make today look primitive.</p>
-  <p>The future of medicine is going to be extraordinary. But you have to be around for it.</p>
-  <p>I don't want anyone else to find out late what they could have known early.</p>
-  <p>If this resonates, we're building it now. I'd love for you to be one of the first to see it.</p>
+  <div class="chapter" id="whats-next"><span class="chapter-num">7</span><span class="chapter-title">What's Next</span></div>
+  <p>Everything I've shared so far is based on the V1 prototype — built on my own data, with my own risk profile. It works. But it's just the beginning.</p>
+  <p>This week I'm kicking off V2. Expanded gene sequencing. Comprehensive lab panels. One additional frontier model joining the AI medical board. Each iteration brings the picture into sharper focus.</p>
+  <p>I expect to open Meridian to our first class by the end of Q2. If you want to stay up to date on our progress, sign up below.</p>
 
   <div class="signature">Jason Yim<br><span style="font-size:13px; color:#8a8578;">CEO LASO Health<br>Meridian Patient 0</span></div>
 
-  <!-- WAITLIST -->
-  <div class="waitlist" id="waitlist" style="margin-top:120px;">
-    <p class="lead">Be first to know.</p>
-    <p>We're building Meridian now. Join the waitlist and we'll keep you updated on our progress — and let you know when we're accepting applications.</p>
+  <!-- SIGNUP -->
+  <div class="waitlist" id="waitlist" style="margin-top:80px;">
     <form class="waitlist-form" id="waitlistForm" onsubmit="return submitWaitlist(event)">
       <div class="waitlist-input-row">
         <input type="text" id="waitlistName" placeholder="First name" required autocomplete="given-name" />
         <input type="email" id="waitlistEmail" placeholder="Email" required autocomplete="email" />
-        <button type="submit" id="waitlistBtn">Join waitlist</button>
+        <button type="submit" id="waitlistBtn">Send me the next chapter</button>
       </div>
       <p class="waitlist-status" id="waitlistStatus"></p>
     </form>
