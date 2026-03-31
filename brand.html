@@ -106,29 +106,41 @@
     margin-bottom: 20px;
   }
 
+  /* Grids — no cropping, images scale to fit naturally */
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    align-items: start;
   }
   .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
+    align-items: start;
   }
   .grid-2 img, .grid-3 img {
     width: 100%;
-    object-fit: cover;
+    height: auto;
     border-radius: 2px;
+    display: block;
   }
-  .grid-2 img { aspect-ratio: 4/3; }
-  .grid-3 img { aspect-ratio: 3/4; }
 
+  /* Full-width single image */
+  .full-img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+  }
+
+  /* Phone mockups — centered, natural aspect */
   .phone-mockup {
     display: block;
     margin: 0 auto;
     max-width: 360px;
     width: 100%;
+    height: auto;
     border-radius: 2px;
   }
 
@@ -162,8 +174,8 @@
     .brand-hero h1 { font-size: clamp(22px, 6vw, 28px); }
     .text { padding: 0 24px; }
     .images { padding: 0 24px; }
+    .grid-2 { grid-template-columns: 1fr; }
     .grid-3 { grid-template-columns: 1fr; }
-    .grid-3 img { aspect-ratio: 4/3; }
     .phone-mockup { max-width: 280px; }
   }
 </style>
@@ -183,12 +195,14 @@
   <h1>The visual identity is not decoration.<em>It is the embodiment of disciplined vitality.</em></h1>
 </section>
 
+<!-- Opening phone mockup -->
 <div class="images">
   <img src="brand/hero.jpg" alt="Meridian app — disciplined vitality" class="phone-mockup">
 </div>
 
 <div class="sp-xl"></div>
 
+<!-- Architecture & Nature -->
 <div class="text">
   <p class="section-label">Architecture & Nature</p>
   <p>We created a world that feels exactly like the promise we make: modern precision quietly enabling deeper presence in nature. You'll see clean, cantilevered architecture standing in sharp contrast against raw alpine wilderness. Glass walls, stone volumes, and minimalist steel lines that never compete with the landscape — they frame it, open to it, and let you step fully into it.</p>
@@ -205,6 +219,7 @@
 
 <div class="sp-xl"></div>
 
+<!-- Golden Hour -->
 <div class="text">
   <p class="section-label">Golden Hour</p>
   <p>Golden-hour light is our constant. Horizon Gold warmth bathes every image, signaling optimism and momentum without ever feeling forced. The palette stays restrained: Alpine Bone neutrals, Granite Mist haze, Slate Ridge depth, and Forest Depth greens. No bright wellness colors. Just the real, documentary tones of a place you actually want to be.</p>
@@ -221,6 +236,7 @@
 
 <div class="sp-xl"></div>
 
+<!-- The People -->
 <div class="text">
   <p class="section-label">The People</p>
   <p>Photography is always real. You'll meet the same five high-agency characters throughout the experience — men and women in their late fifties who look and move with the vitality of people ten years younger. They are not models. They are the community we serve: laughing on terraces, hiking ridges at dawn, skipping stones across alpine lakes. Their presence is calm, capable, and deeply alive.</p>
@@ -236,17 +252,9 @@
   </div>
 </div>
 
-<div class="sp-lg"></div>
-
-<div class="images">
-  <div class="grid-2">
-    <img src="brand/ref-183.jpg" alt="Meridian Circle — community connection">
-    <img src="brand/ref-184.jpg" alt="Meridian Insights — data visualization">
-  </div>
-</div>
-
 <div class="sp-xl"></div>
 
+<!-- Premium Restraint -->
 <div class="text">
   <p class="section-label">Premium Restraint</p>
   <p>The overall feeling is premium restraint. Apple-clear precision in the architecture and UI, Rivian-grounded optimism in the light and landscape. Nothing flashy. Nothing clinical. Just a quiet, confident visual language that says: the best days are still ahead, and the systems behind Meridian are what make them possible.</p>
@@ -254,12 +262,18 @@
 
 <div class="sp-lg"></div>
 
+<!-- App mockups — all three phones -->
 <div class="images">
-  <img src="brand/product-vision.jpg" alt="Meridian product vision" class="phone-mockup">
+  <div class="grid-3">
+    <img src="brand/ref-183.jpg" alt="Meridian Circle — community connection">
+    <img src="brand/ref-184.jpg" alt="Meridian Insights — data visualization">
+    <img src="brand/product-vision.jpg" alt="Meridian product vision — trajectory meets landscape">
+  </div>
 </div>
 
 <div class="sp-xl"></div>
 
+<!-- Closing -->
 <div class="text">
   <p style="text-align:center; color:rgba(254,255,241,0.6); font-style:italic;">This is the world we built so that when you open the app or land on the site, you instantly feel the Meridian promise before you read a single word.</p>
 </div>
