@@ -64,11 +64,8 @@
     font-weight: 400;
     line-height: 1.75;
   }
-
-  .images {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 48px;
+  .text p:first-child {
+    margin-top: 0;
   }
 
   .brand-hero {
@@ -96,51 +93,19 @@
     font-style: italic;
   }
 
-  .section-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #c8ad86;
-    margin-bottom: 20px;
-  }
-
-  /* Grids — no cropping, images scale to fit naturally */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    align-items: start;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-    align-items: start;
-  }
-  .grid-2 img, .grid-3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-    display: block;
-  }
-
-  /* Full-width single image */
-  .full-img {
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-    display: block;
-  }
-
-  /* Phone mockups — centered, natural aspect */
-  .phone-mockup {
-    display: block;
+  /* Collage — masonry-style columns */
+  .collage {
+    max-width: 1100px;
     margin: 0 auto;
-    max-width: 360px;
+    padding: 0 48px;
+    columns: 3;
+    column-gap: 12px;
+  }
+  .collage img {
     width: 100%;
     height: auto;
+    display: block;
+    margin-bottom: 12px;
     border-radius: 2px;
   }
 
@@ -166,17 +131,17 @@
     color: #e8e4dc;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     nav { padding: 10px 16px; gap: 6px; }
     .nav-logo { font-size: 10px; letter-spacing: 2px; }
     .nav-links a { font-size: 10px; letter-spacing: 1px !important; margin-left: 8px; }
     .brand-hero { padding: 80px 24px 40px; min-height: 100vh; }
     .brand-hero h1 { font-size: clamp(22px, 6vw, 28px); }
     .text { padding: 0 24px; }
-    .images { padding: 0 24px; }
-    .grid-2 { grid-template-columns: 1fr; }
-    .grid-3 { grid-template-columns: 1fr; }
-    .phone-mockup { max-width: 280px; }
+    .collage { columns: 2; padding: 0 24px; }
+  }
+  @media (max-width: 480px) {
+    .collage { columns: 1; }
   }
 </style>
 </head>
@@ -191,91 +156,35 @@
   </div>
 </nav>
 
+<!-- Hero -->
 <section class="brand-hero">
   <h1>The visual identity is not decoration.<em>It is the embodiment of disciplined vitality.</em></h1>
 </section>
 
-<!-- Opening phone mockup -->
-<div class="images">
-  <img src="brand/hero.jpg" alt="Meridian app — disciplined vitality" class="phone-mockup">
-</div>
-
-<div class="sp-xl"></div>
-
-<!-- Architecture & Nature -->
+<!-- All copy -->
 <div class="text">
-  <p class="section-label">Architecture & Nature</p>
   <p>We created a world that feels exactly like the promise we make: modern precision quietly enabling deeper presence in nature. You'll see clean, cantilevered architecture standing in sharp contrast against raw alpine wilderness. Glass walls, stone volumes, and minimalist steel lines that never compete with the landscape — they frame it, open to it, and let you step fully into it.</p>
-</div>
-
-<div class="sp-lg"></div>
-
-<div class="images">
-  <div class="grid-2">
-    <img src="brand/ref-176.jpg" alt="Alpine resort with cantilevered infinity pool">
-    <img src="brand/ref-178.jpg" alt="Modern geometric hotel above lake at dusk">
-  </div>
-</div>
-
-<div class="sp-xl"></div>
-
-<!-- Golden Hour -->
-<div class="text">
-  <p class="section-label">Golden Hour</p>
   <p>Golden-hour light is our constant. Horizon Gold warmth bathes every image, signaling optimism and momentum without ever feeling forced. The palette stays restrained: Alpine Bone neutrals, Granite Mist haze, Slate Ridge depth, and Forest Depth greens. No bright wellness colors. Just the real, documentary tones of a place you actually want to be.</p>
-</div>
-
-<div class="sp-lg"></div>
-
-<div class="images">
-  <div class="grid-2">
-    <img src="brand/ref-177.jpg" alt="Infinity pool with olive trees in golden light">
-    <img src="brand/ref-180.jpg" alt="Couple on terrace overlooking mountain ranges">
-  </div>
-</div>
-
-<div class="sp-xl"></div>
-
-<!-- The People -->
-<div class="text">
-  <p class="section-label">The People</p>
   <p>Photography is always real. You'll meet the same five high-agency characters throughout the experience — men and women in their late fifties who look and move with the vitality of people ten years younger. They are not models. They are the community we serve: laughing on terraces, hiking ridges at dawn, skipping stones across alpine lakes. Their presence is calm, capable, and deeply alive.</p>
-</div>
-
-<div class="sp-lg"></div>
-
-<div class="images">
-  <div class="grid-3">
-    <img src="brand/ref-179.jpg" alt="Two women in outdoor apparel by water">
-    <img src="brand/ref-181.jpg" alt="Friends toasting on stone terrace at sunset">
-    <img src="brand/ref-182.jpg" alt="Two men on platform with snow-capped peaks">
-  </div>
-</div>
-
-<div class="sp-xl"></div>
-
-<!-- Premium Restraint -->
-<div class="text">
-  <p class="section-label">Premium Restraint</p>
   <p>The overall feeling is premium restraint. Apple-clear precision in the architecture and UI, Rivian-grounded optimism in the light and landscape. Nothing flashy. Nothing clinical. Just a quiet, confident visual language that says: the best days are still ahead, and the systems behind Meridian are what make them possible.</p>
-</div>
-
-<div class="sp-lg"></div>
-
-<!-- App mockups — all three phones -->
-<div class="images">
-  <div class="grid-3">
-    <img src="brand/ref-183.jpg" alt="Meridian Circle — community connection">
-    <img src="brand/ref-184.jpg" alt="Meridian Insights — data visualization">
-    <img src="brand/product-vision.jpg" alt="Meridian product vision — trajectory meets landscape">
-  </div>
+  <p>This is the world we built so that when you open the app or land on the site, you instantly feel the Meridian promise before you read a single word.</p>
 </div>
 
 <div class="sp-xl"></div>
 
-<!-- Closing -->
-<div class="text">
-  <p style="text-align:center; color:rgba(254,255,241,0.6); font-style:italic;">This is the world we built so that when you open the app or land on the site, you instantly feel the Meridian promise before you read a single word.</p>
+<!-- Collage — all images, masonry layout -->
+<div class="collage">
+  <img src="brand/hero.jpg" alt="Meridian app — disciplined vitality">
+  <img src="brand/ref-176.jpg" alt="Alpine resort with cantilevered infinity pool">
+  <img src="brand/ref-177.jpg" alt="Infinity pool with olive trees in golden light">
+  <img src="brand/ref-178.jpg" alt="Modern geometric hotel above lake at dusk">
+  <img src="brand/ref-179.jpg" alt="Two women in outdoor apparel by water">
+  <img src="brand/ref-180.jpg" alt="Couple on terrace overlooking mountain ranges">
+  <img src="brand/ref-181.jpg" alt="Friends toasting on stone terrace at sunset">
+  <img src="brand/ref-182.jpg" alt="Two men on platform with snow-capped peaks">
+  <img src="brand/ref-183.jpg" alt="Meridian Circle — community connection">
+  <img src="brand/ref-184.jpg" alt="Meridian Insights — data visualization">
+  <img src="brand/product-vision.jpg" alt="Meridian product vision">
 </div>
 
 <div class="sp-xl"></div>
